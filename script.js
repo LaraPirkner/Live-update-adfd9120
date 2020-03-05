@@ -12,5 +12,12 @@ function calculation() {
 }
 
 /*date*/
-var date = new Date();
-document.getElementById("date").innerHTML = date;
+function clockTick()    {
+    currentTime = new Date();
+    hours = currentTime.getHours(),
+    minutes = currentTime.getMinutes(),
+    seconds = currentTime.getSeconds(),
+    document.getElementById('date').innerHTML= (hours + ':' + minutes + ':' + seconds);
+ }
+ 
+ setInterval(function(){clockTick();}, 1000);
